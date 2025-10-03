@@ -1,0 +1,4 @@
+'use client';
+import Link from 'next/link'; import { usePathname } from 'next/navigation';
+const links=[{href:'/',label:'Home'},{href:'/about',label:'About'},{href:'/services',label:'Services'},{href:'/gip',label:'GIP'},{href:'/case-studies',label:'Case Studies'},{href:'/insights',label:'Insights'},{href:'/contact',label:'Contact'}];
+export default function NavBar(){ const pathname=usePathname(); return (<nav style={{borderBottom:'1px solid #eee'}}><div className="container" style={{display:'flex',alignItems:'center',justifyContent:'space-between',height:64}}><Link href="/" style={{fontWeight:800,color:'#0A1F44'}}>Cavallino Capital</Link><div style={{display:'flex',gap:16}}>{links.map(l=>(<Link key={l.href} href={l.href} style={{fontWeight:pathname===l.href?700:500,color:pathname===l.href?'#0A1F44':'#333'}}>{l.label}</Link>))}</div></div></nav>); }
