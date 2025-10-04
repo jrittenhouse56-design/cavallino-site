@@ -6,4 +6,3 @@ module.exports = withMDX({
   reactStrictMode: true,
   images: { remotePatterns: [] }
 })
-
