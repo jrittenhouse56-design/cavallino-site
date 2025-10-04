@@ -36,4 +36,4 @@ Your content here.
 ## Notes
 - Colors & spacing: see `app/globals.css`
 - Replace contact form `action` with your provider (Formspree, Basin, etc.)
-commit
+
